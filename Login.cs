@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Projeto_Integrador_Construção_do_Sistema
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
@@ -20,7 +20,7 @@ namespace Projeto_Integrador_Construção_do_Sistema
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 f = new Form1();
+            Home f = new Home();
             f.Closed += (s, args) => this.Close();
             f.Show();
         }

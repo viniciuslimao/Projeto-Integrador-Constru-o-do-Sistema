@@ -9,19 +9,19 @@ using System.Windows.Forms;
 
 namespace Projeto_Integrador_Construção_do_Sistema
 {
-    public partial class CadastroUsuario : Form
+    public partial class Home : Form
     {
         //Fields
         private IconButton currentBtn;
-        private Panel leftBoarderBtnt;
+        private Panel leftBorderBtnt;
         private Form currentChildForm;
         //Constructor
-        public CadastroUsuario()
+        public Home()
         {
             InitializeComponent();
-            leftBoarderBtnt = new Panel();
-            leftBoarderBtnt.Size = new Size(7, 60);
-            panelMenu.Controls.Add(leftBoarderBtnt);
+            leftBorderBtnt = new Panel();
+            leftBorderBtnt.Size = new Size(7, 60);
+            panelMenu.Controls.Add(leftBorderBtnt);
             //Form
             this.Text = string.Empty;
             this.ControlBox = false;
@@ -37,7 +37,7 @@ namespace Projeto_Integrador_Construção_do_Sistema
             public static Color color3 = Color.FromArgb(253, 138, 114);
             public static Color color4 = Color.FromArgb(95, 77, 221);
 
-            //para caso eu for usa futuramente ou adicinar um botao.
+            //para caso eu for usar futuramente ou adicionar um botao.
             /*public static Color color5 = Color.FromArgb(249, 88, 155);
             public static Color color6 = Color.FromArgb(24, 161, 251);*/
 
@@ -52,17 +52,17 @@ namespace Projeto_Integrador_Construção_do_Sistema
                 DisableButton();
                 //Button
                 currentBtn = (IconButton)senderBtn;
-                currentBtn.BackColor = Color.FromArgb(31, 30, 68);
+                currentBtn.BackColor = Color.LightCyan;
                 currentBtn.ForeColor = color;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = color;
                 currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
                 currentBtn.ImageAlign = ContentAlignment.MiddleRight;
                 //Left board button
-                leftBoarderBtnt.BackColor = color;
-                leftBoarderBtnt.Location = new Point(0, currentBtn.Location.Y);
-                leftBoarderBtnt.Visible = true;
-                leftBoarderBtnt.BringToFront();
+                leftBorderBtnt.BackColor = color;
+                leftBorderBtnt.Location = new Point(0, currentBtn.Location.Y);
+                leftBorderBtnt.Visible = true;
+                leftBorderBtnt.BringToFront();
 
                 //Icon Corrent Form
                 iconCurrentChildForm.IconChar = currentBtn.IconChar;
@@ -74,7 +74,7 @@ namespace Projeto_Integrador_Construção_do_Sistema
         {
             if (currentBtn != null)
             {
-                currentBtn.BackColor = Color.FromArgb(31, 30, 68);
+                currentBtn.BackColor = Color.DarkCyan;
                 currentBtn.ForeColor = Color.Gainsboro;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.IconColor = Color.Gainsboro;
@@ -104,7 +104,7 @@ namespace Projeto_Integrador_Construção_do_Sistema
         private void iconButton1_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color1);
-           /* OpenChildForm();*/
+            
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
@@ -115,6 +115,22 @@ namespace Projeto_Integrador_Construção_do_Sistema
         private void iconButton3_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColor.color3);
+            OpenChildForm(new Pesquisa());
         }
+        private void btnHome_Click_1(object sender, EventArgs e)
+        {
+            currentChildForm.Close();
+            Reset();
+        }
+        private void Reset()
+        {
+            DisableButton();
+            leftBorderBtnt.Visible = false;
+            iconCurrentChildForm.IconChar = IconChar.Home;
+            iconCurrentChildForm.IconColor = Color.Maroon;
+            //lblTitleChildForm.Text = "Home";//
+        }
+
+       
     }
 }

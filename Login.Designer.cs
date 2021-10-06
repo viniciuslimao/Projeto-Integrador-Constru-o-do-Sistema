@@ -1,7 +1,7 @@
 ﻿
 namespace Projeto_Integrador_Construção_do_Sistema
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,6 +29,7 @@ namespace Projeto_Integrador_Construção_do_Sistema
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,7 +43,7 @@ namespace Projeto_Integrador_Construção_do_Sistema
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Projeto_Integrador_Construção_do_Sistema.Properties.Resources.WhatsApp_Image_2021_10_06_at_13_58_27;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 103);
@@ -53,7 +54,7 @@ namespace Projeto_Integrador_Construção_do_Sistema
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(118, 35);
+            this.label1.Location = new System.Drawing.Point(118, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 15);
             this.label1.TabIndex = 1;
@@ -62,7 +63,7 @@ namespace Projeto_Integrador_Construção_do_Sistema
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(118, 70);
+            this.label2.Location = new System.Drawing.Point(118, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 15);
             this.label2.TabIndex = 2;
@@ -70,7 +71,7 @@ namespace Projeto_Integrador_Construção_do_Sistema
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(174, 65);
+            this.textBox1.Location = new System.Drawing.Point(174, 78);
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '*';
             this.textBox1.Size = new System.Drawing.Size(100, 23);
@@ -78,43 +79,48 @@ namespace Projeto_Integrador_Construção_do_Sistema
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(174, 35);
+            this.textBox2.Location = new System.Drawing.Point(174, 48);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 23);
             this.textBox2.TabIndex = 4;
             // 
             // buttonCadastrodeUsuario
             // 
-            this.buttonCadastrodeUsuario.Location = new System.Drawing.Point(12, 155);
+            this.buttonCadastrodeUsuario.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.buttonCadastrodeUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCadastrodeUsuario.Location = new System.Drawing.Point(12, 145);
             this.buttonCadastrodeUsuario.Name = "buttonCadastrodeUsuario";
-            this.buttonCadastrodeUsuario.Size = new System.Drawing.Size(75, 23);
+            this.buttonCadastrodeUsuario.Size = new System.Drawing.Size(79, 31);
             this.buttonCadastrodeUsuario.TabIndex = 5;
             this.buttonCadastrodeUsuario.Text = "Cadastrar";
-            this.buttonCadastrodeUsuario.UseVisualStyleBackColor = true;
+            this.buttonCadastrodeUsuario.UseVisualStyleBackColor = false;
             // 
             // buttonLogin
             // 
-            this.buttonLogin.Location = new System.Drawing.Point(161, 107);
+            this.buttonLogin.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.buttonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLogin.Location = new System.Drawing.Point(192, 145);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(75, 23);
+            this.buttonLogin.Size = new System.Drawing.Size(82, 31);
             this.buttonLogin.TabIndex = 6;
             this.buttonLogin.Text = "Login";
-            this.buttonLogin.UseVisualStyleBackColor = true;
+            this.buttonLogin.UseVisualStyleBackColor = false;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(-1, 137);
+            this.label3.Location = new System.Drawing.Point(2, 120);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(138, 15);
             this.label3.TabIndex = 7;
             this.label3.Text = "Caso não seja registrado ";
             // 
-            // Form1
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(286, 188);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonLogin);
@@ -124,7 +130,7 @@ namespace Projeto_Integrador_Construção_do_Sistema
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form1";
+            this.Name = "Login";
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
